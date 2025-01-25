@@ -1,4 +1,0 @@
-Installation: 
-    - npx create-react-app blog
-    - npm install web-vitals
-    - npm install react-router-dom
