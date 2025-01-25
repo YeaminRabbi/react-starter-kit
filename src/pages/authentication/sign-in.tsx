@@ -12,17 +12,15 @@ const SignInPage: FC = function () {
           className="mr-3 h-12"
         />
         <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-          Flowbite
+         React Form Builder
         </span>
       </div>
       <Card
         horizontal
-        imgSrc="/images/authentication/login.jpg"
-        imgAlt=""
         className="w-full md:max-w-screen-sm [&>img]:hidden md:[&>img]:w-96 md:[&>img]:p-0 md:[&>*]:w-full md:[&>*]:p-16 lg:[&>img]:block"
       >
         <h1 className="mb-3 text-2xl font-bold dark:text-white md:text-3xl">
-          Sign in to platform
+          Sign in to your account
         </h1>
         <form>
           <div className="mb-4 flex flex-col gap-y-3">
@@ -48,12 +46,6 @@ const SignInPage: FC = function () {
               <Checkbox id="rememberMe" name="rememberMe" />
               <Label htmlFor="rememberMe">Remember me</Label>
             </div>
-            <a
-              href="#"
-              className="w-1/2 text-right text-sm text-primary-600 dark:text-primary-300"
-            >
-              Lost Password?
-            </a>
           </div>
           <div className="mb-6">
             <Button type="submit" className="w-full lg:w-auto">
@@ -62,7 +54,7 @@ const SignInPage: FC = function () {
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-300">
             Not registered?&nbsp;
-            <a href="#" className="text-primary-600 dark:text-primary-300">
+            <a href="/register" className="text-primary-600 dark:text-primary-300">
               Create account
             </a>
           </p>
