@@ -13,7 +13,7 @@ This is a React application designed to deliver modern, responsive, and dynamic 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/blog.git
-   cd blog
+   git clone https://github.com/YeaminRabbi/react-starter-kit
+   cd react-starter-kit
 2. npm install
 3. npm start
