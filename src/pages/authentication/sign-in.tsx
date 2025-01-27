@@ -12,6 +12,14 @@ const SignInPage: FC = function () {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [loginUser, { isLoading }] = useLoginUserMutation();
 
+  // Check for the token on component mount
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+      if (token) {
+        navigate("/dashboard"); // Redirect to the dashboard if token exists
+      }
+  }, [navigate]);
+
   useEffect(() => {
     if (searchParams.get("account") === "true") {
       setMessage("Account created successfully");
@@ -49,8 +57,8 @@ const SignInPage: FC = function () {
     <div className="flex flex-col items-center justify-center px-6 lg:h-screen lg:gap-y-12">
       <div className="my-6 flex items-center gap-x-1 lg:my-0">
         <img
-          alt="Flowbite logo"
-          src="https://flowbite.com/docs/images/logo.svg"
+          alt="Form Builder"
+          src="https://techstringit.com/setting-images/01JB7ME64HNQN9FPA9BYQYPMQ2.png"
           className="mr-3 h-12"
         />
         <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
