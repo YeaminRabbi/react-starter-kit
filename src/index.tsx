@@ -10,6 +10,8 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from "./store"; // Import the Redux store
 import SignInPage from "./pages/authentication/sign-in";
 import SignUpPage from "./pages/authentication/sign-up";
+import Dashboard from "./pages/dashboard/dashboard";
+import PrivateRoute from "./components/authentication";
 
 const container = document.getElementById("root");
 
@@ -28,6 +30,15 @@ root.render(
             <Route path="/" element={<SignInPage />} index />
             <Route path="/login" element={<SignInPage />} index />
             <Route path="/register" element={<SignUpPage />} index />
+
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </Flowbite>

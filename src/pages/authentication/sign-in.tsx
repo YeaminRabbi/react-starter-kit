@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+import { Button, Card, Label, TextInput } from "flowbite-react";
 import { FC, useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "../../features/api/apiSlice";
@@ -27,8 +26,9 @@ const SignInPage: FC = function () {
     try {
       const response = await loginUser({ email, password }).unwrap();
       if (response?.status === 200) {
-        console.log("Login successful:", response);
-        // navigate("/dashboard");
+        const token = response.data.access_token;
+        localStorage.setItem("authToken", `Bearer ${token}`); // Store the token in localStorage
+        navigate("/dashboard");
       }
       else if(response?.status === 401){
         setErrorMessage(response?.message);
