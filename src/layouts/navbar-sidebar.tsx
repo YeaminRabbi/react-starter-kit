@@ -95,7 +95,11 @@ const MainContentFooter: FC = function () {
         </div>
       </Footer>
       <p className="my-8 text-center text-sm text-gray-500 dark:text-gray-300">
-        &copy; 2019-2022 Flowbite.com. All rights reserved.
+        &copy; 2025 <a href="https://techstringit.com" style={{
+            color: "#4A90E2", // Custom color
+            textDecoration: "none", // Removes the underline
+            fontWeight: "bold", // Makes the text bold
+          }}>Techstring IT</a>. All rights reserved.
       </p>
     </>
   );
